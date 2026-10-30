@@ -1,4 +1,4 @@
-# Enterprise MySQL to Elasticsearch Real-Time Sync API 🚀
+# Enterprise MySQL to Elasticsearch Real-Time Sync API
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110.0-009688.svg?style=flat&logo=FastAPI&logoColor=white)](https://fastapi.tiangolo.com)
 [![Elasticsearch](https://img.shields.io/badge/Elasticsearch-8.13.0-005571.svg?style=flat&logo=Elasticsearch&logoColor=white)](https://www.elastic.co/)
@@ -12,7 +12,7 @@ Este repositório contém uma implementação completa e de padrão corporativo 
 
 ---
 
-## 📌 1. O Problema de Negócio & Desafio Técnico
+## 1. O Problema de Negócio & Desafio Técnico
 
 Em ambientes transacionais de grande escala:
 * Executar consultas complexas com filtros, ordenação e busca textual diretamente no **MySQL** causa **Table/Row Lock contention**, consome até 90% da CPU e eleva a latência para segundos.
@@ -21,7 +21,7 @@ Em ambientes transacionais de grande escala:
 
 ---
 
-## 🏛️ 2. Arquitetura da Solução (CDC Pattern)
+## 2. Arquitetura da Solução (CDC Pattern)
 
 A arquitetura adota o padrão **Change Data Capture (CDC) via Outbox / Binlog Streaming**, desacoplando a carga pesada de leitura do banco relacional:
 
@@ -53,7 +53,7 @@ A arquitetura adota o padrão **Change Data Capture (CDC) via Outbox / Binlog St
 
 ---
 
-## 📊 3. Benchmark de Performance (MySQL vs. Elasticsearch)
+## 3. Benchmark de Performance (MySQL vs. Elasticsearch)
 
 Simulação com **5.000.000 de registros** sob concorrência de escritas contínuas:
 
@@ -67,7 +67,7 @@ Simulação com **5.000.000 de registros** sob concorrência de escritas contín
 
 ---
 
-## ⚡ 4. Endpoints Principais da API
+## 4. Endpoints Principais da API
 
 ### Consultas Rápidas (Servidas pelo Elasticsearch):
 * `GET /api/v1/items/search`: Busca textual tolerante a erros (*fuzziness*), filtros por categoria, status, faixa de preço, ordenação dinâmica e paginação.
@@ -84,7 +84,7 @@ Simulação com **5.000.000 de registros** sob concorrência de escritas contín
 
 ---
 
-## 🚀 5. Como Executar o Projeto
+## 5. Como Executar o Projeto
 
 ### Pré-requisitos:
 - Docker e Docker Compose instalados.
@@ -96,11 +96,11 @@ docker-compose up --build -d
 
 ### Acessar a Documentação Interativa (Swagger):
 Abra no navegador:
-👉 **[http://localhost:8000/docs](http://localhost:8000/docs)**
+**[http://localhost:8000/docs](http://localhost:8000/docs)**
 
 ---
 
-## 👨‍💻 Autor & Contato
+## Autor & Contato
 
 **Pedro Moacyr Barcelos Neto**  
 *M.Sc. em Computação Aplicada (UFMS) | Backend Developer (Python, C#, MySQL, Elasticsearch, APIs de Alta Performance)*  
